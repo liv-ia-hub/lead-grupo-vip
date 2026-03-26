@@ -18,12 +18,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '303579897304435');  /* ← troque pelo seu Pixel ID */
+    fbq('init', '303579897304435');
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=303579897304435&ev=PageView&noscript=1"/>
   </noscript>
   <!-- ── FIM META PIXEL ──────────────────────────────────────── -->
 
@@ -311,7 +311,7 @@
       font-size: 1.1rem;
       font-weight: 600;
       color: var(--rose-txt);
-      filter: blur(6px);
+      filter: blur(5px);
       user-select: none;
     }
 
@@ -724,8 +724,8 @@
 <!-- ── TEASER ────────────────────────────────────────────────── -->
 <div class="teaser">
   <p>
-    Preços exclusivas mas <strong>visíveis apenas para quem está no grupo VIP</strong>.
-    Cadastre-se abaixo e enviaremos o link das ofertas para o seu WhatsApp.
+    Ofertas exclusivas e antecipadas mas <strong>visíveis apenas para quem está no grupo VIP</strong>.
+    Cadastre-se abaixo e enviaremos o link no grupo e no seu WhatsApp.
   </p>
 </div>
 
@@ -862,6 +862,15 @@
 
     try {
       await saveLead(nome, whatsapp);
+
+      /* ── EVENTO META PIXEL: Lead ─────────────────────────
+         Disparado APENAS após confirmação do Supabase.
+         Só leads realmente salvos são contados no Ads Manager.
+      ──────────────────────────────────────────────────── */
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+
       document.getElementById('leadForm').style.display   = 'none';
       document.getElementById('successBox').style.display = 'block';
       showToast('🎉 Cadastro realizado com sucesso!');
