@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo VIP Rigolim — Ofertas Exclusivas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ── META PIXEL ──────────────────────────────────────────── -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '303579897304435');  /* ← troque pelo seu Pixel ID */
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- ── FIM META PIXEL ──────────────────────────────────────── -->
+
+  <style>
+    /* ─── PALETA RIGOLIM ─────────────────────────────────────── */
+    :root {
+      --bg:        #FFFFFF;
+      --bg-soft:   #FAF8F7;
+      --rose-pale: #F2EAE7;
+      --blush:     #D4A8A0;
+      --rose-txt:  #C47870;
+      --charcoal:  #1C1C1C;
+      --mid:       #6B6B6B;
+      --border:    #E8E0DD;
+      --pkg-bg:    #EDD9D3;
+      --pkg-dark:  #C9A59D;
+      --white:     #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ─── ANNOUNCEMENT BAR ───────────────────────────────────── */
+    .announce {
+      background: var(--charcoal);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+    .announce strong { color: #E8D5D0; font-weight: 500; }
+
+    /* ─── LOGO BAR ───────────────────────────────────────────── */
+    .logo-bar {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      text-align: center;
+    }
+    .logo-bar img { height: 36px; object-fit: contain; }
+    .logo-fallback {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--charcoal);
+      letter-spacing: .04em;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 52px 24px 36px;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(212,168,160,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -80px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(212,168,160,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .vip-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose-txt);
+      border: 1px solid var(--blush);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 22px;
+    }
+    .vip-badge::before { content: '✦'; font-size: 8px; }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      line-height: 1.12;
+      color: var(--charcoal);
+      letter-spacing: -0.01em;
+      max-width: 580px;
+      margin-inline: auto;
+    }
+    .hero h1 em { font-style: italic; color: var(--rose-txt); }
+
+    .hero .hero-sub {
+      margin-top: 18px;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--mid);
+      max-width: 420px;
+      margin-inline: auto;
+      line-height: 1.65;
+    }
+
+    .hero-cta { margin-top: 28px; }
+
+    .btn-anchor {
+      display: inline-block;
+      padding: 15px 32px;
+      background: var(--charcoal);
+      color: var(--white);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+    .btn-anchor:hover { background: #333; transform: translateY(-2px); }
+
+    .hero-note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    /* ─── PROOF STRIP ────────────────────────────────────────── */
+    .proof-strip {
+      background: var(--rose-pale);
+      padding: 14px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--mid);
+      font-weight: 300;
+    }
+    .proof-strip strong { color: var(--rose-txt); font-weight: 500; }
+
+    /* ─── SECTION HEADER ─────────────────────────────────────── */
+    .sec-header {
+      text-align: center;
+      padding: 48px 24px 6px;
+    }
+    .sec-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: var(--charcoal);
+      line-height: 1.2;
+    }
+    .sec-header h2 em { font-style: italic; color: var(--rose-txt); }
+    .sec-header p {
+      font-size: 13px;
+      color: var(--mid);
+      margin-top: 8px;
+      font-weight: 300;
+    }
+
+    /* ─── PRODUCT GRID ───────────────────────────────────────── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 20px 16px 10px;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+    @media (min-width: 580px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 24px rgba(28,28,28,.08);
+      transform: translateY(-3px);
+    }
+
+    .prod-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--bg-soft);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .prod-svg {
+      width: 72%;
+      height: 72%;
+      filter: blur(6px);
+      transform: scale(1.05);
+      transition: filter .3s;
+    }
+    .product-card:hover .prod-svg { filter: blur(7px); }
+
+    .lock-layer {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .lock-ring {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 12px rgba(28,28,28,.25);
+      animation: pulse 3.2s ease-in-out infinite;
+    }
+    .lock-ring svg { width: 15px; height: 15px; fill: #F2EAE7; }
+
+    .lock-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(4px);
+      padding: 3px 9px;
+      border-radius: 100px;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50%      { transform: scale(1.08); }
+    }
+
+    .prod-info {
+      padding: 11px 12px 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    .prod-name {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--mid);
+      line-height: 1.35;
+      margin-bottom: 7px;
+      filter: blur(0px);
+      user-select: none;
+    }
+
+    .prod-price-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .prod-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--rose-txt);
+      filter: blur(6px);
+      user-select: none;
+    }
+
+    .prod-off {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--blush);
+      border-radius: 4px;
+      padding: 2px 6px;
+      filter: blur(0px);
+      user-select: none;
+    }
+
+    /* ─── TEASER ─────────────────────────────────────────────── */
+    .teaser {
+      text-align: center;
+      max-width: 480px;
+      margin-inline: auto;
+      padding: 20px 24px 44px;
+    }
+    .teaser p {
+      font-size: 14px;
+      color: var(--mid);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    .teaser p strong { color: var(--charcoal); font-weight: 500; }
+
+    /* ─── BENEFITS ───────────────────────────────────────────── */
+    .benefits {
+      background: var(--charcoal);
+      padding: 44px 20px;
+    }
+    .benefits-inner {
+      max-width: 680px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    .benefits h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+      color: var(--white);
+      margin-bottom: 30px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+    }
+    .ben-card {
+      border: 1px solid rgba(212,168,160,.22);
+      border-radius: 10px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .ben-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .ben-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D4A8A0;
+      margin-bottom: 7px;
+    }
+    .ben-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* ─── FORM SECTION ───────────────────────────────────────── */
+    .form-wrap {
+      padding: 56px 24px 64px;
+      max-width: 460px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    .form-wrap h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(1.7rem, 5vw, 2.4rem);
+      color: var(--charcoal);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .form-wrap h2 em { font-style: italic; color: var(--rose-txt); }
+    .form-wrap .form-sub {
+      font-size: 14px;
+      color: var(--mid);
+      font-weight: 300;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .lead-form { display: flex; flex-direction: column; gap: 14px; }
+
+    .field-wrap label {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    .field-wrap input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .field-wrap input:focus {
+      border-color: var(--blush);
+      box-shadow: 0 0 0 3px rgba(212,168,160,.14);
+    }
+    .field-wrap input::placeholder { color: rgba(107,107,107,.35); }
+
+    .btn-submit {
+      margin-top: 4px;
+      width: 100%;
+      padding: 17px 24px;
+      background: var(--charcoal);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s, transform .2s, box-shadow .2s;
+    }
+    .btn-submit:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(28,28,28,.18);
+    }
+    .btn-submit:active { transform: none; }
+    .btn-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+
+    .privacy-note {
+      font-size: 11px;
+      color: rgba(107,107,107,.55);
+      font-weight: 300;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    /* ─── SUCCESS ────────────────────────────────────────────── */
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .success-box .s-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .success-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .success-box p {
+      font-size: 14px;
+      color: var(--mid);
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .btn-wpp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 26px;
+      background: #25D366;
+      color: var(--white);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background .2s, transform .2s;
+    }
+    .btn-wpp:hover { background: #1ebe5a; transform: translateY(-2px); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 11px;
+      color: rgba(107,107,107,.5);
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+
+    /* ─── TOAST ──────────────────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--charcoal);
+      color: var(--white);
+      font-size: 13px;
+      padding: 11px 22px;
+      border-radius: 100px;
+      box-shadow: 0 6px 28px rgba(0,0,0,.18);
+      transition: transform .38s cubic-bezier(.34,1.56,.64,1);
+      z-index: 9999;
+      white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ─── ANIMATIONS ─────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero, .proof-strip, .sec-header, .product-grid,
+    .teaser, .benefits, .form-wrap {
+      animation: fadeUp .65s ease both;
+    }
+    .hero          { animation-delay: .05s; }
+    .proof-strip   { animation-delay: .12s; }
+    .sec-header    { animation-delay: .20s; }
+    .product-grid  { animation-delay: .28s; }
+    .teaser        { animation-delay: .36s; }
+    .benefits      { animation-delay: .44s; }
+    .form-wrap     { animation-delay: .52s; }
+  </style>
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT ──────────────────────────────────────────── -->
+<div class="announce">
+  💌 Grupo VIP Rigolim — <strong>Ofertas exclusivas só para membros</strong>
+</div>
+
+<!-- ── LOGO ─────────────────────────────────────────────────── -->
+<div class="logo-bar">
+  <img
+    src="https://images.tcdn.com.br/files/907088/themes/204/img/settings/logo.rigolim.png"
+    alt="Rigolim Hair and Co"
+    onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';"
+  />
+  <span class="logo-fallback" style="display:none">Rigolim Hair and Co</span>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<div class="hero">
+  <div class="vip-badge">Grupo VIP Exclusivo</div>
+  <h1>As melhores ofertas<br>chegam <em>primeiro</em> no grupo</h1>
+  <p class="hero-sub">
+    Promoções e preços especiais que não aparecem na loja.
+    Liberados com antecedência, só para membros VIP.
+  </p>
+  <div class="hero-cta">
+    <a href="#form" class="btn-anchor">Quero entrar no grupo →</a>
+    <p class="hero-note">Mais de <strong id="counter">247</strong> pessoas já fazem parte</p>
+  </div>
+</div>
+
+<!-- ── PROOF STRIP ───────────────────────────────────────────── -->
+<div class="proof-strip">
+  🔥 Membros VIP recebem acesso a promoções <strong>antes do anúncio público</strong>
+</div>
+
+<!-- ── PRODUCTS ──────────────────────────────────────────────── -->
+<div class="sec-header">
+  <h2>Uma prévia do que espera<br>quem está no grupo <em>VIP</em></h2>
+  <p>Valores e detalhes liberados apenas para membros</p>
+</div>
+
+<div class="product-grid">
+
+  <!-- 1. Cera em Bastão Hair Balm -->
+  <div class="product-card">
+    <div class="prod-img-wrap">
+      <svg class="prod-svg" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="32" y="22" width="56" height="158" rx="10" fill="#EDD9D3"/>
+        <rect x="37" y="52" width="46" height="76" rx="4" fill="#E2C9C2"/>
+        <text x="60" y="82" font-family="Georgia,serif" font-size="9" fill="#9A6F68" text-anchor="middle" font-style="italic">my</text>
+        <text x="60" y="96" font-family="Georgia,serif" font-size="13" fill="#7A5248" text-anchor="middle" font-weight="bold">style</text>
+        <text x="60" y="116" font-family="Arial,sans-serif" font-size="6" fill="#A07870" text-anchor="middle">Hair Balm</text>
+        <rect x="44" y="14" width="32" height="10" rx="3" fill="#C9A59D"/>
+      </svg>
+      <div class="lock-layer">
+        <div class="lock-ring">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3.1-8H8.9V7a3.1 3.1 0 0 1 6.2 0v3z"/></svg>
+        </div>
+        <span class="lock-label">Só no grupo VIP</span>
+      </div>
+    </div>
+    <div class="prod-info">
+      <p class="prod-name">Cera em bastão stick hair balm 20g</p>
+      <div class="prod-price-row">
+        <span class="prod-price">R$ ██,██</span>
+        <span class="prod-off">VIP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Light Spray -->
+  <div class="product-card">
+    <div class="prod-img-wrap">
+      <svg class="prod-svg" viewBox="0 0 90 210" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="32" width="38" height="148" rx="8" fill="#EDD9D3"/>
+        <rect x="30" y="62" width="30" height="66" rx="3" fill="#E2C9C2"/>
+        <text x="45" y="86" font-family="Georgia,serif" font-size="7" fill="#9A6F68" text-anchor="middle" font-style="italic">my</text>
+        <text x="45" y="98" font-family="Georgia,serif" font-size="10" fill="#7A5248" text-anchor="middle" font-weight="bold">style</text>
+        <text x="45" y="116" font-family="Arial,sans-serif" font-size="5" fill="#A07870" text-anchor="middle">Light Spray</text>
+        <rect x="38" y="20" width="14" height="14" rx="3" fill="#C9A59D"/>
+        <rect x="42" y="12" width="6" height="10" rx="2" fill="#B89A93"/>
+      </svg>
+      <div class="lock-layer">
+        <div class="lock-ring">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3.1-8H8.9V7a3.1 3.1 0 0 1 6.2 0v3z"/></svg>
+        </div>
+        <span class="lock-label">Só no grupo VIP</span>
+      </div>
+    </div>
+    <div class="prod-info">
+      <p class="prod-name">Cera líquida light spray 300ml</p>
+      <div class="prod-price-row">
+        <span class="prod-price">R$ ███,██</span>
+        <span class="prod-off">VIP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Fix Spray Cachos -->
+  <div class="product-card">
+    <div class="prod-img-wrap">
+      <svg class="prod-svg" viewBox="0 0 90 210" xmlns="http://www.w3.org/2000/svg">
+        <rect x="24" y="30" width="42" height="152" rx="9" fill="#EDD9D3"/>
+        <rect x="28" y="60" width="34" height="70" rx="3" fill="#E2C9C2"/>
+        <text x="45" y="86" font-family="Georgia,serif" font-size="7" fill="#9A6F68" text-anchor="middle" font-style="italic">my</text>
+        <text x="45" y="98" font-family="Georgia,serif" font-size="10" fill="#7A5248" text-anchor="middle" font-weight="bold">style</text>
+        <text x="45" y="118" font-family="Arial,sans-serif" font-size="5" fill="#A07870" text-anchor="middle">Fix Spray</text>
+        <rect x="36" y="18" width="18" height="14" rx="3" fill="#C9A59D"/>
+        <rect x="40" y="10" width="10" height="10" rx="2" fill="#B89A93"/>
+      </svg>
+      <div class="lock-layer">
+        <div class="lock-ring">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3.1-8H8.9V7a3.1 3.1 0 0 1 6.2 0v3z"/></svg>
+        </div>
+        <span class="lock-label">Só no grupo VIP</span>
+      </div>
+    </div>
+    <div class="prod-info">
+      <p class="prod-name">Spray fixador cachos fix spray</p>
+      <div class="prod-price-row">
+        <span class="prod-price">R$ ███,██</span>
+        <span class="prod-off">VIP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Thermal Dream -->
+  <div class="product-card">
+    <div class="prod-img-wrap">
+      <svg class="prod-svg" viewBox="0 0 90 210" xmlns="http://www.w3.org/2000/svg">
+        <rect x="22" y="28" width="46" height="156" rx="9" fill="#EDD9D3"/>
+        <rect x="27" y="57" width="36" height="74" rx="3" fill="#E2C9C2"/>
+        <text x="45" y="84" font-family="Georgia,serif" font-size="7" fill="#9A6F68" text-anchor="middle" font-style="italic">my</text>
+        <text x="45" y="96" font-family="Georgia,serif" font-size="10" fill="#7A5248" text-anchor="middle" font-weight="bold">style</text>
+        <text x="45" y="116" font-family="Arial,sans-serif" font-size="4.5" fill="#A07870" text-anchor="middle">Thermal Dream</text>
+        <rect x="35" y="16" width="20" height="14" rx="3" fill="#C9A59D"/>
+        <rect x="39" y="8"  width="12" height="10" rx="2" fill="#B89A93"/>
+      </svg>
+      <div class="lock-layer">
+        <div class="lock-ring">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3.1-8H8.9V7a3.1 3.1 0 0 1 6.2 0v3z"/></svg>
+        </div>
+        <span class="lock-label">Só no grupo VIP</span>
+      </div>
+    </div>
+    <div class="prod-info">
+      <p class="prod-name">Protetor térmico thermal dream spray</p>
+      <div class="prod-price-row">
+        <span class="prod-price">R$ ███,██</span>
+        <span class="prod-off">VIP</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── TEASER ────────────────────────────────────────────────── -->
+<div class="teaser">
+  <p>
+    Preços exclusivas mas <strong>visíveis apenas para quem está no grupo VIP</strong>.
+    Cadastre-se abaixo e enviaremos o link das ofertas para o seu WhatsApp.
+  </p>
+</div>
+
+<!-- ── BENEFITS ─────────────────────────────────────────────── -->
+<div class="benefits">
+  <div class="benefits-inner">
+    <h3>O que o grupo VIP entrega</h3>
+    <div class="benefits-grid">
+      <div class="ben-card">
+        <div class="ben-icon">⚡</div>
+        <div class="ben-title">Acesso Antecipado</div>
+        <div class="ben-desc">Promoções liberadas no grupo antes de qualquer outro canal</div>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🎁</div>
+        <div class="ben-title">Preços Exclusivos</div>
+        <div class="ben-desc">Ofertas que não aparecem no site público</div>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🔔</div>
+        <div class="ben-title">Aviso em Primeira Mão</div>
+        <div class="ben-desc">Seja notificado antes do estoque esgotar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FORM ──────────────────────────────────────────────────── -->
+<div class="form-wrap" id="form">
+  <h2>Entrar no Grupo <em>VIP</em></h2>
+  <p class="form-sub">
+    Gratuito. Preencha abaixo e enviaremos o link do grupo diretamente no seu WhatsApp.
+  </p>
+
+  <form class="lead-form" id="leadForm" novalidate>
+    <div class="field-wrap">
+      <label for="nome">Seu nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" autocomplete="given-name" required />
+    </div>
+
+    <div class="field-wrap">
+      <label for="whatsapp">WhatsApp (com DDD)</label>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 9 0000-0000" autocomplete="tel" required />
+    </div>
+
+    <button type="submit" class="btn-submit" id="submitBtn">
+      Quero Entrar no Grupo VIP →
+    </button>
+
+    <p class="privacy-note">🔒 Seus dados ficam seguros. Sem spam, sem listas de revenda.</p>
+  </form>
+
+  <div class="success-box" id="successBox">
+    <div class="s-icon">🎉</div>
+    <h3>Cadastro feito!</h3>
+    <p>Enviamos o link do grupo VIP para o seu WhatsApp. Clique abaixo para já entrar agora.</p>
+    <a href="LINK_DO_GRUPO_WHATSAPP" id="wppLink" class="btn-wpp" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Entrar no Grupo VIP
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <p>© 2025 Rigolim Hair and Co · Todos os direitos reservados</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- ── SCRIPT ─────────────────────────────────────────────────── -->
+<script>
+  /* ═══════════════════════════════════════════════════════════
+     ⚙️  CONFIGURAÇÃO — substitua pelos seus dados reais
+  ═══════════════════════════════════════════════════════════ */
+  const SUPABASE_URL   = 'https://gkbjqnaqqppxfegzikwd.supabase.co';
+  const SUPABASE_ANON  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrYmpxbmFxcXBweGZlZ3ppa3dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1MzU0ODIsImV4cCI6MjA5MDExMTQ4Mn0.cJHIFufqocC85sonF-sKap1UroN_eztdvwxXrojkd-Q';
+  const WPP_GROUP_LINK = 'https://devzapp.com.br/api-engennier/campanha/api/redirect/65e5d9999ac779000197f4af';
+  const TABLE_NAME     = 'leads_vip';
+
+  document.getElementById('wppLink').href = WPP_GROUP_LINK;
+  document.getElementById('counter').textContent = 247 + Math.floor(Math.random() * 15);
+
+  /* máscara telefone */
+  document.getElementById('whatsapp').addEventListener('input', function(e) {
+    let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+    if      (v.length <= 2)  v = v.replace(/^(\d{0,2})/, '($1');
+    else if (v.length <= 6)  v = v.replace(/^(\d{2})(\d{0,4})/, '($1) $2');
+    else if (v.length <= 10) v = v.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    else                     v = v.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+    e.target.value = v;
+  });
+
+  function showToast(msg, ms = 3500) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), ms);
+  }
+
+  async function saveLead(nome, whatsapp) {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE_NAME}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type':  'application/json',
+        'apikey':        SUPABASE_ANON,
+        'Authorization': `Bearer ${SUPABASE_ANON}`,
+        'Prefer':        'return=minimal'
+      },
+      body: JSON.stringify({
+        nome,
+        whatsapp,
+        origem:     document.referrer || 'direct',
+        created_at: new Date().toISOString()
+      })
+    });
+    if (!res.ok) throw new Error(await res.text());
+  }
+
+  document.getElementById('leadForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const nome     = document.getElementById('nome').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const btn      = document.getElementById('submitBtn');
+
+    if (!nome || nome.length < 2)                    { showToast('⚠️ Informe seu nome.'); return; }
+    if (whatsapp.replace(/\D/g, '').length < 10)     { showToast('⚠️ Informe um WhatsApp válido com DDD.'); return; }
+
+    btn.disabled    = true;
+    btn.textContent = 'Aguarde...';
+
+    try {
+      await saveLead(nome, whatsapp);
+      document.getElementById('leadForm').style.display   = 'none';
+      document.getElementById('successBox').style.display = 'block';
+      showToast('🎉 Cadastro realizado com sucesso!');
+    } catch (err) {
+      console.error(err);
+      showToast('❌ Erro ao salvar. Tente novamente.');
+      btn.disabled    = false;
+      btn.textContent = 'Quero Entrar no Grupo VIP →';
+    }
+  });
+</script>
+
+</body>
+</html>
